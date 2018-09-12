@@ -3,13 +3,17 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
-import PostsReducers from './store/reducers/index';
+import PostReducer from './store/reducers/index';
 import App from "./components/App";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const PostsReducers = combineReducers ({
+    burgerBuilder: PostReducer,
+})
 
 const store = createStore(PostsReducers, composeEnhancers(
     applyMiddleware(thunk)

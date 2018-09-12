@@ -20,6 +20,7 @@ export const initIngredients = () => {
         axios.get( 'http://jsonplaceholder.typicode.com/posts' )
             .then( response => {
                 dispatch(setIngredients(response.data))
+                console.log('resoooo:', response.data)
             } )
             .catch( error => {
                 dispatch(fetchIngredientsFaild())

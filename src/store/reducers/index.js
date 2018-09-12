@@ -6,7 +6,7 @@ const reducer = ( state = {}, action ) => {
         case actionTypes.FETCH_POSTS:
         // action contains -> action.type = 'FETCH_POSTS'
         //                 -> action.ingredients = [<data for ingredients>]
-            console.log(action);
+            console.log('reducers: ', action);
             return {
                 ...state,
                 // need to save the part of state per action
