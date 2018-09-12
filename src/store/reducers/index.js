@@ -12,6 +12,12 @@ const reducer = ( state = {}, action ) => {
                 // need to save the part of state per action
                 ingredients: action.ingredients 
             }
+        case actionTypes.FETCH_POST_DETAIL:
+        console.log('details: ', action);
+            return {
+                ...state,
+                showPost: action.showPost
+            }
         default:
             return state
     }

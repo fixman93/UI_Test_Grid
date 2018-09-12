@@ -6,6 +6,7 @@ import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 import Protected from "../container/posts/posts";
 import Public from "./pages/Public";
+import PostsShow from '../container/posts/posts'
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
 
           <Route path="/public" component={Public} />
           <Route path="/login" component={Login} />
+          <Route path="/posts/:id" component={PostsShow} />
           <PrivateRoute path="/protected" component={Protected} />
         </div>
       </Router>

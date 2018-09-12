@@ -1,3 +1,4 @@
 export { 
-    initIngredients
+    initIngredients,
+    fetchPost
 } from './Posts'
