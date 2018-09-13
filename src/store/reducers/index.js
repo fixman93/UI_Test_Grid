@@ -13,10 +13,10 @@ const reducer = ( state = {}, action ) => {
                 ingredients: action.ingredients 
             }
         case actionTypes.FETCH_POST_DETAIL:
-        console.log('details: ', action);
+            console.log('details: ', action.payload);
             return {
                 ...state,
-                showPost: action.showPost
+                id: action.payload
             }
         default:
             return state

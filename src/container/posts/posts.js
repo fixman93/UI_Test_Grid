@@ -26,7 +26,7 @@ class Posts extends Component {
             showPosts = this.props.posts.map(post =>(
                 <div className="row" key={post.id}>
                     <div className="col-2 postId">{post.id}</div>
-                    <div className="col-2 postTitle"><Link to='/'>{post.title}</Link></div>
+                    <div className="col-2 postTitle"><Link to={`/posts/${post.id}`}>{post.title}</Link></div>
                     <div className="col-25 postBody">{post.body}</div>
                     <div className="col-1 deletePost">x</div>
                 </div>
@@ -67,7 +67,7 @@ Posts.propTypes = {
 }
 
 function mapStateToProps(state) {
-    return { posts: state.burgerBuilder.ingredients }
+    return { posts: state.allposts.ingredients }
   }
 
   const mapDispatchToProps = dispatch => {

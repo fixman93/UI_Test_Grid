@@ -12,7 +12,7 @@ import App from "./components/App";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const PostsReducers = combineReducers ({
-    burgerBuilder: PostReducer,
+    allposts: PostReducer,
 })
 
 const store = createStore(PostsReducers, composeEnhancers(

@@ -9,6 +9,12 @@ export const setIngredients = (ingredients) => {
     }
 }
 
+export const getPost = (postId) => {
+    return {
+        type: actionTypes.FETCH_POST_DETAIL,
+        payload: postId
+    }
+}
 
 export const fetchIngredientsFaild = () => {
     return {
@@ -29,12 +35,7 @@ export const initIngredients = () => {
     }
 }
 
-export const getPost = (showPost) => {
-    return {
-        type: actionTypes.FETCH_POST_DETAIL,
-        showPost: showPost
-    }
-}
+
 
 export const fetchPostDetailFaild = () => {
     return {
@@ -42,12 +43,15 @@ export const fetchPostDetailFaild = () => {
     }
 }
 
-export const fetchPost = () => {
+export const fetchPost = (id) => {
+    console.log('id', id)
     return dispatch => {
-        axios.get( 'http://jsonplaceholder.typicode.com/posts/1' )
+        axios.get( `http://jsonplaceholder.typicode.com/posts/${id}` )
             .then( response => {
                 dispatch(getPost(response.data))
+                
                 console.log('detail post:', response.data)
+                
             } )
             .catch( error => {
                 dispatch(fetchPostDetailFaild())
