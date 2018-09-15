@@ -15,7 +15,7 @@ class PostDetail extends Component {
     render() {
         console.log('detail from my post', this.props.post.id)
         return (
-            <div>
+            <div className="postDetail">
                 
                 <h2><b>UserID: {this.props.post.userId}</b> {this.props.post.title}</h2>
                 <p>{this.props.post.body}</p>

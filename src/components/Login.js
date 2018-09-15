@@ -22,7 +22,7 @@ class Login extends Component {
     if (redirectToReferrer === true) return <Redirect to="/protected" />;
 
     return (
-      <div>
+      <div className="loginText">
         <p>You must log in to view this page at {from.pathname}</p>
         <button onClick={this.login}>Log in</button>
       </div>

@@ -5,7 +5,7 @@ class Public extends Component {
     render() {
         return (
             <div>
-                Boris Civcic
+                Public
             </div>
         )
     }

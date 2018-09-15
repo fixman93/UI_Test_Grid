@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    font-family: 'Lato', sans-serif;
+
 }
 
 .grid-container{
@@ -12,6 +14,7 @@ body {
     overflow: auto;
     padding-top: 42px;
     text-align: center;
+    background: #5a819e;
 }
 
 /*-- our cleafix hack -- */ 
@@ -23,12 +26,11 @@ body {
 }
 
 [class*='col-'] {
-    float: left; 
-    min-height: 1px; 
+    float: left;
+    min-height: 1px;
     width: 16.66%; 
     /*-- our gutter -- */
-    padding: 12px; 
-    background-color: #ddd;
+    padding: 12px;
 }
 
 .col-1{ width: 16.66%; }
@@ -40,22 +42,102 @@ body {
 .col-6{ width: 100%;   }
 
 .outline, .outline *{
-    outline: 1px solid #ccc;
 }
 
 /*-- some extra column content styling --*/
 [class*='col-'] > p {
- background-color: rgb(121, 98, 98); 
  padding: 0;
  margin: 0;
  text-align: center; 
  color: white; 
 }
 
-.headerRow {width: 100%;position: absolute;border-bottom: 1px solid #ccc;}
+.grid-container.outline .row div {
+    border-bottom: 1px solid #fef8ad;
+    border-right: 1px solid #fef8ad;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 14px;
+}
+
+.row {
+    display: flex;
+}
+
+.grid-container.outline .row div:first-child {border-left: 1px solid #fef8ad;}
+
+.headerRow {width: 100%;position: absolute;border-bottom: 1px solid #fef8ad;background: #ec743b;}
 
 .gronContainer {
     max-width: 1200px;
     margin: auto;
     position: relative;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #5a819e;
+}
+
+.navBar ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navBar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navBar p {
+    color: white;
+}
+
+.navBar button {
+    background: #fef8ad;
+    border: 1px solid #ec743b;
+    color: #5a819e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.loginText {
+    text-align: center;
+    font-size: 30px;
+    color: #ec743b;
+}
+
+.loginText button {
+    color: #fef8ad;
+    border: 0;
+    background: #5a819e;
+    font-size: 21px;
+    padding: 5px 20px;
+    line-height: 23px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .4s;
+    text-transform: uppercase;
+}
+
+.loginText button:hover {
+    color: #ec743b;
+}
+
+.grid-container a {
+    text-decoration: none;
+    color: #fef8ad;
+    cursor: pointer;
+}
+
+.postDetail {
+    padding: 0 15px;
+    text-align: center;
+    color: #5a819e;
 }

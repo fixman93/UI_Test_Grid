@@ -13,15 +13,17 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <AuthButton />
-          <ul>
-            <li>
-              <Link to="/">Public Page</Link>
-            </li>
-            <li>
-              <Link to="/protected">Protected Page</Link>
-            </li>
-          </ul>
+          <div className="navBar">
+            <AuthButton />
+            <ul>
+              <li>
+                <Link to="/">Public Page</Link>
+              </li>
+              <li>
+                <Link to="/protected">Protected Page</Link>
+              </li>
+            </ul>
+          </div>
 
           <Route path="/public" component={Public} />
           <Route path="/login" component={Login} />
